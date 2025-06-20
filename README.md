@@ -166,6 +166,8 @@ Then remove non-PyPI or ARM-incompatible entries
        -e '/^types-/d' \
        requirements.txt
 
+
+
        sed -i '/^importlib-metadata==/d' requirements.txt
        sed -i -e '/^pgzero==/d' -e '/^pygame</d' requirements.txt
        sed -i '/types-typing-extensions/d' requirements.txt

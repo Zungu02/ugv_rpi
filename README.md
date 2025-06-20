@@ -5,8 +5,8 @@
 # A Laser Defense system prototype
 This is a Raspberry Pi example for the 360° Omnidirectional High-Torque 2-Axis Expandable Pan-Tilt Camera Module, Driven By Serial Bus Servos, Based On General Driver Board For Robots
 
-![](./media/UGV-Rover-details-23.jpg)
-
+![]()
+https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/2/-/2-axis-pan-tilt-camera-module-3.jpg
 ## Basic Description
 The Waveshare UGV robots utilize both an upper computer and a lower computer. This repository contains the program running on the upper computer, which is typically a Raspberry Pi in this setup.  
 

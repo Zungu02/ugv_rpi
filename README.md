@@ -2,8 +2,8 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/effectsmachine/ugv_rpi)
 ![GitHub repo size](https://img.shields.io/github/repo-size/effectsmachine/ugv_rpi) ![GitHub](https://img.shields.io/github/license/effectsmachine/ugv_rpi) ![GitHub last commit](https://img.shields.io/github/last-commit/effectsmachine/ugv_rpi)
 
-# Waveshare UGV Robots
-This is a Raspberry Pi example for the [Waveshare](https://www.waveshare.com/) UGV robots: **WAVE ROVER**, **UGV Rover**, **UGV Beast**, **RaspRover**, **UGV01**, **UGV02**.  
+# A Laser Defense system prototype
+This is a Raspberry Pi example for the 360° Omnidirectional High-Torque 2-Axis Expandable Pan-Tilt Camera Module, Driven By Serial Bus Servos, Based On General Driver Board For Robots
 
 ![](./media/UGV-Rover-details-23.jpg)
 

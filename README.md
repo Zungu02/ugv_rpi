@@ -228,16 +228,16 @@ install mediapipe
  Install extra system dependencies
 
      sudo apt update && sudo apt install -y \
-   portaudio19-dev \
-   libcups2-dev \
-   libgirepository1.0-dev \
-   libglib2.0-dev \
-   libffi-dev \
-   libboost-all-dev \
-   libi2c-dev \
-   python3-dev \
-   python3-gi \
-   python3-cairo
+     portaudio19-dev \
+     libcups2-dev \
+     libgirepository1.0-dev \
+     libglib2.0-dev \
+     libffi-dev \
+     libboost-all-dev \
+     libi2c-dev \
+     python3-dev \
+     python3-gi \
+     python3-cairo
 
 Then run the following:
 

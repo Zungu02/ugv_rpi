@@ -68,7 +68,7 @@ You can clone this repository from Waveshare's GitHub to your local machine.
 
 install  pip dependencies
 
-   pip install --upgrade pip setuptools wheel
+    pip install --upgrade pip setuptools wheel
    
 Install system-level dependencies, These pull in Python dev headers, SDL2 (for pygame), D-Bus bindings, OpenCV requirements, and other low-level libs:
 

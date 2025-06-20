@@ -8,9 +8,7 @@ This is a Raspberry Pi example for the 360° Omnidirectional High-Torque 2-Axis 
 ![2-Axis Pan-Tilt Module](https://www.waveshare.com/media/catalog/product/cache/1/image/560x560/9df78eab33525d08d6e5fb8d27136e95/2/-/2-axis-pan-tilt-camera-module-3.jpg)
 
 ## Basic Description
-The Waveshare UGV robots utilize both an upper computer and a lower computer. This repository contains the program running on the upper computer, which is typically a Raspberry Pi in this setup.  
-
-The program running on the lower computer is either named [ugv_base_ros](https://github.com/effectsmachine/ugv_base_ros.git) or [ugv_base_general](https://github.com/effectsmachine/ugv_base_general.git) depending on the type of robot driver being used.  
+The project incorporates a developed motion-targeting defense system using a Raspberry Pi and real-time video detection,and an integrated servo-controlled laser aiming system with OpenCV for object tracking
 
 The upper computer communicates with the lower computer (the robot's driver based on ESP32) by sending JSON commands via GPIO UART. The host controller, which employs a Raspberry Pi, handles AI vision and strategy planning, while the sub-controller, utilizing an ESP32, manages motion control and sensor data processing. This setup ensures efficient collaboration and enhanced performance.
 

@@ -32,7 +32,7 @@ The upper computer communicates with the lower computer (the robot's driver base
 - Video Recording
 
 ## Quick Install
-You need to install Raspberry Pi OS (64 BIT Bookworm OS) on the Raspberry Pi 4B .  
+Begin by installing Raspberry Pi OS 64-bit (Lite or Desktop) using the Raspberry Pi Imager.  
 
 create your virtual environment with access to system packages
 This will allow your environment to see system-wide libraries like libcamera while still using the virtual environment for project-specific packages. 
@@ -41,9 +41,16 @@ This will allow your environment to see system-wide libraries like libcamera whi
     source ugv-env/bin/activate
 
 
-You can use this tutorial to upgrade your robot's upper computer program.  
+Update the system using 
 
-You can use this tutorial to install this program on a pure Raspberry Pi OS.  
+    sudo apt update && sudo apt full-upgrade -y.  
+
+Install necessary dependencies like pip, opencv-python, numpy, flask, and other required packages using pip. You can also install OpenCV-related system libraries.
+
+    pip install flask flask_socketio mediapipe imageio pyserial
+
+    sudo apt-get update && sudo apt-get upgrade
+    time sudo apt install -y build-essential cmake pkg-config libjpeg-dev libtiff5-dev libpng-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libfontconfig1-dev libcairo2-dev libgdk-pixbuf2.0-dev libpango1.0-dev libgtk2.0-dev libgtk-3-dev libatlas-base-dev gfortran libhdf5-dev libhdf5-serial-dev libhdf5-103 libqt5gui5 libqt5webkit5 libqt5test5 python3-pyqt5 python3-dev
 
 
 ### Download the repo from github

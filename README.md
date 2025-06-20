@@ -55,6 +55,7 @@ Install necessary dependencies like pip, opencv-python, numpy, flask, and other 
 If you're using a PiCamera run:
     
     pip install "picamera[array]"
+    
 ### Download the repo from github
 
 You can clone this repository from Waveshare's GitHub to your local machine.

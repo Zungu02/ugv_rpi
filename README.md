@@ -73,16 +73,17 @@ install  pip dependencies
 Install system-level dependencies, These pull in Python dev headers, SDL2 (for pygame), D-Bus bindings, OpenCV requirements, and other low-level libs:
 
     sudo apt update
-sudo apt install -y \
-  python3-pip python3-venv python3-dev \
-  libatlas-base-dev libopenblas-dev \
-  libhdf5-dev libjpeg-dev libtiff5-dev libpng-dev \
-  libgtk-3-dev libcanberra-gtk* \
-  libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev \
-  libportmidi-dev libfreetype6-dev libxcursor-dev libxrandr-dev \
-  libxinerama-dev libsmpeg-dev libavformat-dev libswscale-dev \
-  libudev-dev \
-  libdbus-1-dev libdbus-glib-1-dev python3-dbus
+    
+    sudo apt install -y \
+    python3-pip python3-venv python3-dev \
+    libatlas-base-dev libopenblas-dev \
+    libhdf5-dev libjpeg-dev libtiff5-dev libpng-dev \
+    libgtk-3-dev libcanberra-gtk* \
+    libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev \
+    libportmidi-dev libfreetype6-dev libxcursor-dev libxrandr-dev \
+    libxinerama-dev libsmpeg-dev libavformat-dev libswscale-dev \
+    libudev-dev \
+    libdbus-1-dev libdbus-glib-1-dev python3-dbus
 
 Install PyQt5 via APT
 

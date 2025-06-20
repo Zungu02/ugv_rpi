@@ -60,7 +60,189 @@ If you're using a PiCamera run:
 You can clone this repository from Waveshare's GitHub to your local machine.
 
     git clone https://github.com/waveshareteam/ugv_rpi.git
+
+### After unzipping, install the software
+ enter "ugv_rpi" 
+
+    cd ugv_rpi
+
+install  pip dependencies
+
+   pip install --upgrade pip setuptools wheel
+   
+Install system-level dependencies, These pull in Python dev headers, SDL2 (for pygame), D-Bus bindings, OpenCV requirements, and other low-level libs:
+
+    sudo apt update
+sudo apt install -y \
+  python3-pip python3-venv python3-dev \
+  libatlas-base-dev libopenblas-dev \
+  libhdf5-dev libjpeg-dev libtiff5-dev libpng-dev \
+  libgtk-3-dev libcanberra-gtk* \
+  libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev \
+  libportmidi-dev libfreetype6-dev libxcursor-dev libxrandr-dev \
+  libxinerama-dev libsmpeg-dev libavformat-dev libswscale-dev \
+  libudev-dev \
+  libdbus-1-dev libdbus-glib-1-dev python3-dbus
+
+Install PyQt5 via APT
+
+  sudo apt update
+sudo apt install -y python3-pyqt5 python3-pyqt5.qtwebsockets python3-pyqt5.qtwebkit
+
+Install the Samba client dev files
+
+    sudo apt update
+    sudo apt install libsmbclient-dev python3-smbc
+
+(Optional) Install minimal Jupyter via APT
+If you still need a notebook interface for quick tests, grab the Debian-packaged version (much smaller overall):
+
+    sudo apt install -y python3-notebook python3-jupyter-core python3-ipykernel
     
+ Install the system package
+
+    sudo apt install -y python3-apt
+
+Install the Debian package
+
+    sudo apt install -y python3-prctl
+
+Install the Debian-packaged python3-pgzero via APT
+
+    sudo apt install -y python3-pgzero
+
+Install the missing SDL1.2 dev libs, then build from pip
+
+    sudo apt update
+sudo apt install -y \
+  libsdl1.2-dev \
+  libsdl-image1.2-dev \
+  libsdl-mixer1.2-dev \
+  libsdl-ttf2.0-dev \
+  libsmpeg-dev \
+  libportmidi-dev \
+  libfreetype6-dev \
+  libjpeg-dev \
+  libpng-dev
+
+Install the distro packages that satisfy python-prctl
+
+    sudo apt install -y python3-prctl libcap-dev
+
+##### strip out all the known problematic or system-only packages from your requirements.txt
+Backup first
+
+     cp requirements.txt requirements.txt.bak
+
+Then remove non-PyPI or ARM-incompatible entries
+
+     sed -i \
+  -e '/^arandr==/d' \
+  -e '/^cupshelpers==/d' \
+  -e '/^dbus-python==/d' \
+  -e '/^python-apt==/d' \
+  -e '/^pysmbc==/d' \
+  -e '/^python-prctl==/d' \
+  -e '/^pygame==/d' \
+  -e '/^pgzero==/d' \
+  -e '/^PyQt5==/d' \
+  -e '/^PyQt5-sip==/d' \
+  -e '/^jupyterlab==/d' \
+  -e '/^jupyter-server==/d' \
+  -e '/^notebook==/d' \
+  -e '/^ipywidgets==/d' \
+  -e '/^ipywidgets==/d' \
+  -e '/^widgetsnbextension==/d' \
+  -e '/^matplotlib==/d' \
+  -e '/^matplotlib-inline==/d' \
+  -e '/^opencv-contrib-python==/d' \
+  -e '/^opencv-python-headless==/d' \
+  -e '/^torch==/d' \
+  -e '/^torchvision==/d' \
+  -e '/^torchaudio==/d' \
+  -e '/^mediapipe==/d' \
+  -e '/^depthai/d' \
+  -e '/^types-/d' \
+  requirements.txt
+
+sed -i '/^importlib-metadata==/d' requirements.txt
+sed -i -e '/^pgzero==/d' -e '/^pygame</d' requirements.txt
+sed -i '/types-typing-extensions/d' requirements.txt
+sed -i '/numpy==1.21/d' requirements.txt
+sed -i '/python-apt/d' requirements.txt
+sed -i '/pysmbc/d' requirements.txt
+sed -i '/python-prctl/d' requirements.txt
+sed -i '/pygame<2.0,>=1.9.2/d' requirements.txt
+
+remove jupyterlab and its widget deps
+
+    sed -i -e '/^jupyterlab==/d' \
+       -e '/^jupyter-server==/d' \
+       -e '/^jupyterlab-pygments==/d' \
+       -e '/^jupyterlab-widgets==/d' \
+       -e '/^notebook==/d' \
+       -e '/^ipywidgets==/d' \
+       requirements.txt
+
+##### Install those via APT
+
+    sudo apt update
+sudo apt install -y \
+  python3-dbus \
+  python3-prctl \
+  python3-pygame \
+  python3-pgzero \
+  python3-pyqt5 \
+  python3-pyqt5.qtwebsockets \
+  python3-pyqt5.qtwebkit \
+  python3-opencv \
+  python3-numpy \
+  python3-scipy \
+  python3-matplotlib \
+  python3-picamera2 \
+  libatlas-base-dev \
+  libopenblas-dev \
+  libhdf5-dev \
+  libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev \
+  libdbus-1-dev libdbus-glib-1-dev \
+  libsmbclient-dev
+
+##### Extras
+ install picamera2
+
+    sudo apt install -y python3-picamera2
+
+    pip install imageio
+    
+install mediapipe
+
+   pip install mediapipe --extra-index-url https://www.piwheels.org/simple
+
+   pip install pyserial
+
+   pip install PyGObject
+
+   sudo apt install -y libgirepository1.0-dev gir1.2-glib-2.0
+
+ Install extra system dependencies
+
+    sudo apt update && sudo apt install -y \
+  portaudio19-dev \
+  libcups2-dev \
+  libgirepository1.0-dev \
+  libglib2.0-dev \
+  libffi-dev \
+  libboost-all-dev \
+  libi2c-dev \
+  python3-dev \
+  python3-gi \
+  python3-cairo
+
+Then run the following:
+
+    pip install PyAudio pycups PyGObject RTIMULib
+
+
 ### Grant execution permission to the installation script
     cd ugv_rpi/
     sudo chmod +x setup.sh

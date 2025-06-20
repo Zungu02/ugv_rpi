@@ -32,9 +32,13 @@ The upper computer communicates with the lower computer (the robot's driver base
 - Video Recording
 
 ## Quick Install
-You need to install Raspberry Pi on your robot if you are using **WAVE ROVER**, **UGV01** or **UGV02**.  
+You need to install Raspberry Pi OS (64 BIT Bookworm OS) on the Raspberry Pi 4B .  
 
-This app is already installed in the SD card of **UGV Rover**, **UGV Beast** and **RaspRover**.  
+create your virtual environment with access to system packages
+This will allow your environment to see system-wide libraries like libcamera while still using the virtual environment for project-specific packages. 
+    python3 -m venv ugv-env --system-site-packages
+    source ugv-env/bin/activate
+
 
 You can use this tutorial to upgrade your robot's upper computer program.  
 

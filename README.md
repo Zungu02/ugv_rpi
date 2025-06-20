@@ -36,6 +36,7 @@ You need to install Raspberry Pi OS (64 BIT Bookworm OS) on the Raspberry Pi 4B 
 
 create your virtual environment with access to system packages
 This will allow your environment to see system-wide libraries like libcamera while still using the virtual environment for project-specific packages. 
+   
     python3 -m venv ugv-env --system-site-packages
     source ugv-env/bin/activate
 

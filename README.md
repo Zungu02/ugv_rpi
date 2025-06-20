@@ -87,8 +87,8 @@ Install system-level dependencies, These pull in Python dev headers, SDL2 (for p
 
 Install PyQt5 via APT
 
-  sudo apt update
-sudo apt install -y python3-pyqt5 python3-pyqt5.qtwebsockets python3-pyqt5.qtwebkit
+    sudo apt update
+    sudo apt install -y python3-pyqt5 python3-pyqt5.qtwebsockets python3-pyqt5.qtwebkit
 
 Install the Samba client dev files
 
@@ -115,16 +115,16 @@ Install the Debian-packaged python3-pgzero via APT
 Install the missing SDL1.2 dev libs, then build from pip
 
     sudo apt update
-sudo apt install -y \
-  libsdl1.2-dev \
-  libsdl-image1.2-dev \
-  libsdl-mixer1.2-dev \
-  libsdl-ttf2.0-dev \
-  libsmpeg-dev \
-  libportmidi-dev \
-  libfreetype6-dev \
-  libjpeg-dev \
-  libpng-dev
+    sudo apt install -y \
+    libsdl1.2-dev \
+    libsdl-image1.2-dev \
+    libsdl-mixer1.2-dev \
+    libsdl-ttf2.0-dev \
+    libsmpeg-dev \
+    libportmidi-dev \
+    libfreetype6-dev \
+    libjpeg-dev \
+    libpng-dev
 
 Install the distro packages that satisfy python-prctl
 
@@ -138,52 +138,52 @@ Backup first
 Then remove non-PyPI or ARM-incompatible entries
 
      sed -i \
-  -e '/^arandr==/d' \
-  -e '/^cupshelpers==/d' \
-  -e '/^dbus-python==/d' \
-  -e '/^python-apt==/d' \
-  -e '/^pysmbc==/d' \
-  -e '/^python-prctl==/d' \
-  -e '/^pygame==/d' \
-  -e '/^pgzero==/d' \
-  -e '/^PyQt5==/d' \
-  -e '/^PyQt5-sip==/d' \
-  -e '/^jupyterlab==/d' \
-  -e '/^jupyter-server==/d' \
-  -e '/^notebook==/d' \
-  -e '/^ipywidgets==/d' \
-  -e '/^ipywidgets==/d' \
-  -e '/^widgetsnbextension==/d' \
-  -e '/^matplotlib==/d' \
-  -e '/^matplotlib-inline==/d' \
-  -e '/^opencv-contrib-python==/d' \
-  -e '/^opencv-python-headless==/d' \
-  -e '/^torch==/d' \
-  -e '/^torchvision==/d' \
-  -e '/^torchaudio==/d' \
-  -e '/^mediapipe==/d' \
-  -e '/^depthai/d' \
-  -e '/^types-/d' \
-  requirements.txt
+       -e '/^arandr==/d' \
+       -e '/^cupshelpers==/d' \
+       -e '/^dbus-python==/d' \
+       -e '/^python-apt==/d' \
+       -e '/^pysmbc==/d' \
+       -e '/^python-prctl==/d' \
+       -e '/^pygame==/d' \
+       -e '/^pgzero==/d' \
+       -e '/^PyQt5==/d' \
+       -e '/^PyQt5-sip==/d' \
+       -e '/^jupyterlab==/d' \
+       -e '/^jupyter-server==/d' \
+       -e '/^notebook==/d' \
+       -e '/^ipywidgets==/d' \
+       -e '/^ipywidgets==/d' \
+       -e '/^widgetsnbextension==/d' \
+       -e '/^matplotlib==/d' \
+       -e '/^matplotlib-inline==/d' \
+       -e '/^opencv-contrib-python==/d' \
+       -e '/^opencv-python-headless==/d' \
+       -e '/^torch==/d' \
+       -e '/^torchvision==/d' \
+       -e '/^torchaudio==/d' \
+       -e '/^mediapipe==/d' \
+       -e '/^depthai/d' \
+       -e '/^types-/d' \
+       requirements.txt
 
-sed -i '/^importlib-metadata==/d' requirements.txt
-sed -i -e '/^pgzero==/d' -e '/^pygame</d' requirements.txt
-sed -i '/types-typing-extensions/d' requirements.txt
-sed -i '/numpy==1.21/d' requirements.txt
-sed -i '/python-apt/d' requirements.txt
-sed -i '/pysmbc/d' requirements.txt
-sed -i '/python-prctl/d' requirements.txt
-sed -i '/pygame<2.0,>=1.9.2/d' requirements.txt
+       sed -i '/^importlib-metadata==/d' requirements.txt
+       sed -i -e '/^pgzero==/d' -e '/^pygame</d' requirements.txt
+       sed -i '/types-typing-extensions/d' requirements.txt
+       sed -i '/numpy==1.21/d' requirements.txt
+       sed -i '/python-apt/d' requirements.txt
+       sed -i '/pysmbc/d' requirements.txt
+       sed -i '/python-prctl/d' requirements.txt
+       sed -i '/pygame<2.0,>=1.9.2/d' requirements.txt
 
 remove jupyterlab and its widget deps
 
-    sed -i -e '/^jupyterlab==/d' \
-       -e '/^jupyter-server==/d' \
-       -e '/^jupyterlab-pygments==/d' \
-       -e '/^jupyterlab-widgets==/d' \
-       -e '/^notebook==/d' \
-       -e '/^ipywidgets==/d' \
-       requirements.txt
+      sed -i -e '/^jupyterlab==/d' \
+             -e '/^jupyter-server==/d' \
+             -e '/^jupyterlab-pygments==/d' \
+             -e '/^jupyterlab-widgets==/d' \
+             -e '/^notebook==/d' \
+             -e '/^ipywidgets==/d' \
+            requirements.txt
 
 ##### Install those via APT
 

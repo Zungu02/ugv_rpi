@@ -187,57 +187,57 @@ remove jupyterlab and its widget deps
 
 ##### Install those via APT
 
-    sudo apt update
-sudo apt install -y \
-  python3-dbus \
-  python3-prctl \
-  python3-pygame \
-  python3-pgzero \
-  python3-pyqt5 \
-  python3-pyqt5.qtwebsockets \
-  python3-pyqt5.qtwebkit \
-  python3-opencv \
-  python3-numpy \
-  python3-scipy \
-  python3-matplotlib \
-  python3-picamera2 \
-  libatlas-base-dev \
-  libopenblas-dev \
-  libhdf5-dev \
-  libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev \
-  libdbus-1-dev libdbus-glib-1-dev \
-  libsmbclient-dev
+      sudo apt update
+      sudo apt install -y \
+      python3-dbus \
+      python3-prctl \
+      python3-pygame \
+      python3-pgzero \
+      python3-pyqt5 \
+      python3-pyqt5.qtwebsockets \
+      python3-pyqt5.qtwebkit \
+      python3-opencv \
+      python3-numpy \
+      python3-scipy \
+      python3-matplotlib \
+      python3-picamera2 \
+      libatlas-base-dev \
+      libopenblas-dev \
+      libhdf5-dev \
+      libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev \
+      libdbus-1-dev libdbus-glib-1-dev \
+      libsmbclient-dev
 
 ##### Extras
  install picamera2
 
-    sudo apt install -y python3-picamera2
+     sudo apt install -y python3-picamera2
 
-    pip install imageio
+     pip install imageio
     
 install mediapipe
 
-   pip install mediapipe --extra-index-url https://www.piwheels.org/simple
+     pip install mediapipe --extra-index-url https://www.piwheels.org/simple
 
-   pip install pyserial
+     pip install pyserial
 
-   pip install PyGObject
+     pip install PyGObject
 
-   sudo apt install -y libgirepository1.0-dev gir1.2-glib-2.0
+     sudo apt install -y libgirepository1.0-dev gir1.2-glib-2.0
 
  Install extra system dependencies
 
-    sudo apt update && sudo apt install -y \
-  portaudio19-dev \
-  libcups2-dev \
-  libgirepository1.0-dev \
-  libglib2.0-dev \
-  libffi-dev \
-  libboost-all-dev \
-  libi2c-dev \
-  python3-dev \
-  python3-gi \
-  python3-cairo
+     sudo apt update && sudo apt install -y \
+   portaudio19-dev \
+   libcups2-dev \
+   libgirepository1.0-dev \
+   libglib2.0-dev \
+   libffi-dev \
+   libboost-all-dev \
+   libi2c-dev \
+   python3-dev \
+   python3-gi \
+   python3-cairo
 
 Then run the following:
 

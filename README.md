@@ -249,6 +249,9 @@ Then run the following:
 
     pip install PyAudio pycups PyGObject RTIMULib
 
+Then install project requirements
+
+    pip install -r ugv_rpi/requirements.txt
 
 ### Grant execution permission to the installation script
     cd ugv_rpi/

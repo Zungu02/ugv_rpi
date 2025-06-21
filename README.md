@@ -270,7 +270,8 @@ Then install project requirements
     *Input 9: Exit installconfig.sh
 
 ####  If you're only using a Picamera (e.g., Picamera2 with libcamera) and not using a DepthAI (OAK) camera
-Disable the depthai parts in the code
+Disable the depthai parts in cv_ctrl.py
+
 
      # ... any depthai-related logic
      
